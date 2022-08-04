@@ -1,0 +1,133 @@
+body{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+   .container {
+    width: 1200px;
+    max-width: 100%;
+    min-height: 400px;
+    margin: 0 auto;
+    background: rgb(247, 246, 244);
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        background: rgb(102, 99, 92);
+
+        .fa-moon {
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+        img {
+            @extend .fa-moon;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+        }
+    }
+
+    .main {
+        padding: 2rem;
+
+        form {
+            input {
+                width: 70%;
+                outline: none;
+                border: none;
+                padding: 0.5rem;
+                background: rgb(189, 183, 170);
+            }
+        }
+
+        .list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            button {
+                background: rgb(102, 99, 92);
+                color: white;
+                padding: 0.5rem;
+                border: none;
+                outline: none;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+
+        .table {
+            text-align: center;
+
+            table {
+                padding: 1rem;
+                width: 100%;
+                background: rgb(189, 183, 170);
+
+                & th,td {
+                    @extend table;
+                    background: rgb(102, 99, 92);
+                    color: white;
+
+                    i {
+                        cursor: pointer;
+                    }
+                } 
+
+            }
+
+        }
+        .newContact{
+            margin-top: 2rem;
+            background: rgb(102, 99, 92);
+            padding: 2rem;
+
+            .addContact {
+                display: flex;
+                flex-direction: column;
+                gap: 0.7rem;
+                
+    
+                label {
+                    font-weight: 500;
+                }
+    
+                .submit {
+                    background: rgb(189, 183, 170);
+                    color: black;
+                    margin-top: 1rem;
+                    padding: 0.5rem;
+                    border: none;
+                    outline: none;
+                    width: 6rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+        }
+       
+    }
+
+   }
+}
+
+.dark {
+    color: white;
+
+    .container{
+        background: black;
+
+    nav {
+        background: rgb(45, 44, 44);
+
+        .fa-moon{
+            color: yellow;
+        }
+    }
+
+    }
+
+    
+}
